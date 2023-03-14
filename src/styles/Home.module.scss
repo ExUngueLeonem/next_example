@@ -1,4 +1,10 @@
+@import 'mixins';
+@import 'variables' ;
+
 .main {
+  // background-color: $color-primary;
+  // @include blue;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;

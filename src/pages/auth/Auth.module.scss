@@ -1,0 +1,7 @@
+@import '@/styles/mixins';
+@import '@/styles/variables';
+
+.foo {
+    background-color: $color-primary;
+    @include blue;
+}
