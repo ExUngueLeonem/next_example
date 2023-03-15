@@ -2,23 +2,6 @@ import Layout from "@/components/Layout";
 import { IUser } from "@/models/contacts";
 import Head from "next/head";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-
-
-export const getStaticProps = async () => {
-    try {
-        const res = await fetch('https://jsonplaceholder.typicode.com/users');
-        const data = await res.json();
-
-        return {
-            props: {
-                contacts: data,
-            }
-        }
-    } catch {
-        return { notFound: true }
-    }
-}
 
 const Contacts = ({ contacts }: { contacts: IUser[] }) => {
 
@@ -44,5 +27,21 @@ const Contacts = ({ contacts }: { contacts: IUser[] }) => {
         </>
     );
 };
+
+//getStaticProps - SSG - static site generation - генерация статической страницы
+export const getStaticProps = async () => {
+    try {
+        const res = await fetch('https://jsonplaceholder.typicode.com/users');
+        const contacts = await res.json();
+
+        return {
+            props: {
+                contacts,
+            }
+        }
+    } catch {
+        return { notFound: true }
+    }
+}
 
 export default Contacts;

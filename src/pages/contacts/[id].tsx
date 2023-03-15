@@ -3,7 +3,15 @@ import Layout from '@/components/Layout';
 import { IUser } from '@/models/contacts';
 import { GetServerSideProps } from 'next';
 
+const Contact = ({ contact }: { contact: IUser }) => {
+    return (
+        <Layout>
+            <ContactInfo contact={contact} />
+        </Layout>
+    );
+}
 
+//getServerSideProps - это сервер сайд рендеринг
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const { id } = ctx.query
 
@@ -19,14 +27,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     } catch {
         return { notFound: true }
     }
-}
-
-const Contact = ({ contact }: { contact: IUser }) => {
-    return (
-        <Layout>
-            <ContactInfo contact={contact} />
-        </Layout>
-    );
 }
 
 export default Contact;
