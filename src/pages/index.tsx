@@ -23,6 +23,7 @@ const Home: FC<IProps> = ({ socials }: { socials: ISocials[] }) => {
         <title>HomePage</title>
       </Head>
       <Layout>
+        123123123123
         <Link href="/auth">auth</Link>
       </Layout>
       <Socials socials={socials} />
