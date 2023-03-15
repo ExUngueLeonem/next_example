@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    height: 80px;
+
+    padding: 10px;
+
+    background-color: paleturquoise;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+    a{
+        text-decoration: none;
+        min-width: 100px;
+        padding: 20px;
+        border-radius: 10px;
+
+        transition: all 0.2s;
+        &:hover {
+            background-color: #fff;
+        }
+    }
+}
