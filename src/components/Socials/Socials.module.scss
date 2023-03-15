@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.socials_item {
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.2s;
+
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        transition: all 0.2s;
+        background-color: cornflowerblue;
+        i {
+            color: #fff;
+        }
+    }
+    i {
+        transition: all 0.2s;
+        font-size: 2rem;
+        color: cornflowerblue;
+    }
+}
