@@ -1,6 +1,11 @@
 import { IPost } from '@/models/post';
+import { FC } from 'react';
 
-const PostInfo = ({ post }: { post: IPost }) => {
+interface IProps {
+    post: IPost
+}
+
+const PostInfo: FC<IProps> = ({ post }) => {
     const { id, title, body } = post
     return (
         <>

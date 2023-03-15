@@ -1,6 +1,11 @@
 import { IUser } from "@/models/contacts";
+import { FC } from "react";
 
-const ContactInfo = ({ contact }: { contact: IUser }) => {
+interface IProps {
+    contact: IUser;
+}
+
+const ContactInfo: FC<IProps> = ({ contact }) => {
     const { name, email, address } = contact || {};
     const { street, suite, city, zipcode } = address || {};
 

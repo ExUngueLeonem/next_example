@@ -1,8 +1,12 @@
-import { ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import Footer from "../Footer";
 import Heading from "../Heading";
 
-const Layout = ({ children }: { children: ReactNode }) => {
+interface IProps {
+    children: ReactNode;
+}
+
+const Layout: FC<IProps> = ({ children }) => {
     return (
         <>
             <Heading />
