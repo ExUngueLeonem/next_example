@@ -26,7 +26,8 @@ export default function Home({ socials }: { socials: ISocials[] }) {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   try {
-    const res = await fetch('http://localhost:3000/api/socials/');
+
+    const res = await fetch(`${process.env.API_HOST}/socials/`);
     const data = await res.json();
     return {
       props: {
