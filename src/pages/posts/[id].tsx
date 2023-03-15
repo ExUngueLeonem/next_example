@@ -4,6 +4,7 @@ import { IPost } from '@/models/post';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 
+//SSG
 const Post = ({ post }: { post: IPost }) => {
     return (
         <Layout>
@@ -12,6 +13,7 @@ const Post = ({ post }: { post: IPost }) => {
     );
 }
 
+//получаем массив путей для статики для генерации страниц
 export const getStaticPaths: GetStaticPaths = async () => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
     const data: IPost[] = await res.json();
@@ -27,6 +29,7 @@ interface IParams extends ParsedUrlQuery {
     id: string
 }
 
+//получаем данные для пререндера статики
 export const getStaticProps: GetStaticProps = async (ctx) => {
     try {
         const { id } = ctx.params as IParams

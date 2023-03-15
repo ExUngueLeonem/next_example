@@ -1,9 +1,8 @@
 import Layout from '@/components/Layout';
 import { IPost } from '@/models/post';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ParsedUrlQuery } from 'querystring';
 
 const Posts = ({ posts }: { posts: IPost[] }) => {
     return (
