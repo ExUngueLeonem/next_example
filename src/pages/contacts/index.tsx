@@ -32,11 +32,11 @@ const Contacts = ({ contacts }: { contacts: IUser[] }) => {
 export const getStaticProps = async () => {
     try {
         const res = await fetch('https://jsonplaceholder.typicode.com/users');
-        const contacts = await res.json();
+        const data = await res.json();
 
         return {
             props: {
-                contacts,
+                contacts: data,
             }
         }
     } catch {
