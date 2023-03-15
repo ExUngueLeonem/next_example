@@ -1,10 +1,18 @@
-import Layout from '@/components/Layout';
-import { IPost } from '@/models/post';
 import { GetStaticProps } from 'next';
+
+import { FC } from 'react';
+import { IPost } from '@/models/post';
+
 import Head from 'next/head';
 import Link from 'next/link';
 
-const Posts = ({ posts }: { posts: IPost[] }) => {
+import Layout from '@/components/Layout';
+
+interface IProps {
+    posts: IPost[];
+}
+
+const Posts: FC<IProps> = ({ posts }: { posts: IPost[] }) => {
     return (
         <>
             <Head>

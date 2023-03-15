@@ -3,8 +3,13 @@ import Layout from '@/components/Layout';
 import { IUser } from '@/models/contacts';
 import { GetServerSideProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
+import { FC } from 'react';
 
-const Contact = ({ contact }: { contact: IUser }) => {
+interface IProps {
+    contact: IUser
+}
+
+const Contact: FC<IProps> = ({ contact }) => {
     return (
         <Layout>
             <ContactInfo contact={contact} />

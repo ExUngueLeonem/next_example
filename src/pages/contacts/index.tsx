@@ -2,8 +2,13 @@ import Layout from "@/components/Layout";
 import { IUser } from "@/models/contacts";
 import Head from "next/head";
 import Link from "next/link";
+import { FC } from "react";
 
-const Contacts = ({ contacts }: { contacts: IUser[] }) => {
+interface IProps {
+    contacts: IUser[];
+}
+
+const Contacts: FC<IProps> = ({ contacts }) => {
 
     return (
         <>

@@ -1,8 +1,9 @@
 
+import { FC } from 'react';
 import Link from 'next/link';
 import styles from './Heading.module.scss';
 
-const Heading = () => {
+const Heading: FC = () => {
     return (
         <div className={styles.header}>
             <div className={styles.logo}>

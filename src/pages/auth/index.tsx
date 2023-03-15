@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import styles from './Auth.module.scss';
 
-const Auth = () => {
+const Auth: FC = () => {
     return (
         <div className={styles.foo}>
             Auth

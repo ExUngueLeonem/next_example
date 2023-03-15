@@ -1,15 +1,22 @@
-import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.scss'
-import Link from 'next/link'
 import { GetStaticProps } from 'next'
+
+import Head from 'next/head'
+import Link from 'next/link'
+import { Inter } from 'next/font/google'
+
+import { FC } from 'react'
 import { ISocials } from '@/models/socials'
+
 import Socials from '@/components/Socials'
 import Layout from '@/components/Layout'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({ socials }: { socials: ISocials[] }) {
+interface IProps {
+  socials: ISocials[];
+}
+
+const Home: FC<IProps> = ({ socials }: { socials: ISocials[] }) => {
   return (
     <>
       <Head>
@@ -37,3 +44,5 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     return { notFound: true };
   }
 }
+
+export default Home;

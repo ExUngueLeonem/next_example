@@ -3,9 +3,14 @@ import PostInfo from '@/components/PostInfo';
 import { IPost } from '@/models/post';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
+import { FC } from 'react';
 
+
+interface IProps {
+    post: IPost;
+}
 //SSG
-const Post = ({ post }: { post: IPost }) => {
+const Post: FC<IProps> = ({ post }) => {
     return (
         <Layout>
             <PostInfo post={post} />
