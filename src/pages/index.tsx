@@ -41,7 +41,11 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
       }
     }
   } catch {
-    return { notFound: true };
+    return {
+      props: {
+        socials: [],
+      }
+    }
   }
 }
 
