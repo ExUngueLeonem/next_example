@@ -9,7 +9,7 @@ const Heading = () => {
                 Logo
             </div>
             <div className={styles.nav_list}>
-                <Link href={"/home"}>Home</Link>
+                <Link href={"/"}>Home</Link>
                 <Link href={"/posts"}>Posts</Link>
                 <Link href={"/contacts"}>Contacts</Link>
             </div>
