@@ -99,7 +99,7 @@ export default function Home(props) {
                 Cookies.set('token', result.token);
                 // window.location.href = referer ? referer : "/";
                 // const pathUrl = referer ? referer.lastIndexOf("/") : "/";
-                Router.push('/');
+                Router.push('/auth');
             } else {
                 setStateFormMessage(result);
             }

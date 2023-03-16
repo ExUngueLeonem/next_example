@@ -7,10 +7,10 @@ import {
     getAppCookies,
     verifyToken,
     setLogout,
-} from '../middleware/utils';
+} from '@/middleware/utils';
 
 /* components */
-import Layout from '../components/layout/Layout';
+import PageJWTLayout from '@/components/PageJWTLayout';
 
 export default function About(props) {
     const { profile } = props;
@@ -20,7 +20,7 @@ export default function About(props) {
     }
 
     return (
-        <Layout title="Next.js with JWT Authentication | About Page">
+        <PageJWTLayout title="Next.js with JWT Authentication | About Page">
             <div className="container">
                 <main>
                     <h1 className="title">About Page</h1>
@@ -29,8 +29,8 @@ export default function About(props) {
                     ) : (
                         <div>
                             <div style={{ margin: '.5rem 0rem' }}>
-                                <Link href={{ pathname: '/' }} style={{ marginRight: '.75rem' }}>
-                                    &bull; Home Page
+                                <Link href={{ pathname: '/auth' }} style={{ marginRight: '.75rem' }}>
+                                    &bull; Home Page Auth
                                 </Link>
                                 <a href="#" onClick={e => handleOnClickLogout(e)}>
                                     &bull; Logout
@@ -50,7 +50,7 @@ export default function About(props) {
                     )}
                 </main>
             </div>
-        </Layout>
+        </PageJWTLayout>
     );
 }
 

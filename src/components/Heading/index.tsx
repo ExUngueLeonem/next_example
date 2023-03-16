@@ -16,7 +16,6 @@ const Heading: FC = () => {
     return (
         <div className={styles.header}>
             <div className={styles.logo}>
-                Logo
                 {router.pathname}
             </div>
             <div className={styles.nav_list}>
