@@ -3,6 +3,9 @@
 const path = require('path');
 
 const nextConfig = {
+  env: {
+    API_HOST: process.env.API_HOST,
+  },
   reactStrictMode: true,
 }
 
