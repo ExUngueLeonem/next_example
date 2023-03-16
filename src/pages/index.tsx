@@ -14,10 +14,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 interface IProps {
   socials: ISocials[];
-  // env: any;
 }
 
-const Home: FC<IProps> = ({ socials/* , env */ }: { socials: ISocials[]/* , env: any */ }) => {
+const Home: FC<IProps> = ({ socials }: { socials: ISocials[] }) => {
   return (
     <>
       <Head>
@@ -28,7 +27,6 @@ const Home: FC<IProps> = ({ socials/* , env */ }: { socials: ISocials[]/* , env:
         <br />
         <Link href="/auth">auth</Link>
         <br />
-        {/* {env} */}
       </Layout>
       <Socials socials={socials} />
     </>
@@ -44,7 +42,6 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     return {
       props: {
         socials: data,
-        // env: process.env.API_HOST
       }
     }
   } catch {
