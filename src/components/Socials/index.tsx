@@ -1,4 +1,4 @@
-import { ISocials } from "@/models/socials";
+import { ISocials } from "models/socials";
 import { FC } from "react";
 
 import styles from './Socials.module.scss';

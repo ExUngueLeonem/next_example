@@ -1,4 +1,4 @@
-import { IPost } from '@/models/post';
+import { IPost } from 'models/post';
 import { FC } from 'react';
 
 interface IProps {

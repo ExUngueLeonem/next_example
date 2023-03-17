@@ -1,12 +1,12 @@
 import { GetStaticProps } from 'next';
 
 import { FC } from 'react';
-import { IPost } from '@/models/post';
+import { IPost } from 'models/post';
 
 import Head from 'next/head';
 import Link from 'next/link';
 
-import Layout from '@/components/Layout';
+import Layout from 'components/Layout';
 
 interface IProps {
     posts: IPost[];

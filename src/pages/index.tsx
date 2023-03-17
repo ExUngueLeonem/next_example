@@ -5,10 +5,11 @@ import Link from 'next/link'
 import { Inter } from 'next/font/google'
 
 import { FC } from 'react'
-import { ISocials } from '@/models/socials'
+import { ISocials } from 'models/socials'
 
-import Socials from '@/components/Socials'
-import Layout from '@/components/Layout'
+import Socials from 'components/Socials'
+import Layout from 'components/Layout'
+import useUser from 'lib/useUser'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +18,8 @@ interface IProps {
 }
 
 const Home: FC<IProps> = ({ socials }: { socials: ISocials[] }) => {
+  const {user, mutateUser} = useUser();
+
   return (
     <>
       <Head>

@@ -1,6 +1,6 @@
-import ContactInfo from '@/components/ContactInfo';
-import Layout from '@/components/Layout';
-import { IUser } from '@/models/contacts';
+import ContactInfo from 'components/ContactInfo';
+import Layout from 'components/Layout';
+import { IUser } from 'models/contacts';
 import { GetServerSideProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import { FC } from 'react';

@@ -1,4 +1,4 @@
-import { IUser } from "@/models/contacts";
+import { IUser } from "models/contacts";
 import { FC } from "react";
 
 interface IProps {
