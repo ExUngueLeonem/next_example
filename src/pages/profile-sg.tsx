@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from 'components/Layout'
 import useUser from 'lib/useUser'
 import useEvents from 'lib/useEvents'
+import Link from 'next/link'
 
 // Make sure to check https://nextjs.org/docs/basic-features/layouts for more info on how to use layouts
 export default function SgProfile() {
@@ -18,7 +19,7 @@ export default function SgProfile() {
         <a href="https://nextjs.org/docs/basic-features/pages#static-generation-recommended">
           Static Generation (SG)
         </a>{' '}
-        and the <a href="/api/user">/api/user</a> route (using{' '}
+        and the <Link href="/api/user">/api/user</Link> route (using{' '}
         <a href="https://github.com/vercel/swr">vercel/SWR</a>)
       </h2>
       {user && (

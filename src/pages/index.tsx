@@ -18,7 +18,7 @@ interface IProps {
 }
 
 const Home: FC<IProps> = ({ socials }: { socials: ISocials[] }) => {
-  const {user, mutateUser} = useUser();
+  // const {user, mutateUser} = useUser();
 
   return (
     <>
@@ -29,6 +29,8 @@ const Home: FC<IProps> = ({ socials }: { socials: ISocials[] }) => {
         test 18
         <br />
         <Link href="/auth">auth</Link>
+        <br />
+        <Link href="/login">login</Link>
         <br />
       </Layout>
       <Socials socials={socials} />
