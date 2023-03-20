@@ -4,23 +4,24 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import fetchJson from 'lib/fetchJson'
 
+import styles from './Header.module.scss';
+
 export default function Header() {
   const { user, mutateUser } = useUser()
   const router = useRouter()
 
   return (
-    <header>
-      <nav>
-        <ul>
+    <header className={styles.header}>
+      <ul className={styles.navbar}>
           <li>
-            <Link href="/" legacyBehavior>
-              <a>Home</a>
+            <Link href="/">
+              Home
             </Link>
           </li>
           {user?.isLoggedIn === false && (
             <li>
-              <Link href="/login" legacyBehavior>
-                <a>Login</a>
+              <Link href="/login" >
+                Login
               </Link>
             </li>
           )}
@@ -49,12 +50,12 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/profile-ssr" legacyBehavior>
-                  <a>Profile (Server-side Rendering)</a>
+                <Link href="/profile-ssr">
+                  Profile (Server-side Rendering)
                 </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/api/logout"
                   onClick={async (e) => {
                     e.preventDefault()
@@ -66,7 +67,7 @@ export default function Header() {
                   }}
                 >
                   Logout
-                </a>
+                </Link>
               </li>
             </>
           )}
@@ -80,42 +81,7 @@ export default function Header() {
               />
             </a>
           </li>
-        </ul>
-      </nav>
-      <style jsx>{`
-        ul {
-          display: flex;
-          list-style: none;
-          margin-left: 0;
-          padding-left: 0;
-        }
-
-        li {
-          margin-right: 1rem;
-          display: flex;
-        }
-
-        li:first-child {
-          margin-left: auto;
-        }
-
-        a {
-          color: #fff;
-          text-decoration: none;
-          display: flex;
-          align-items: center;
-        }
-
-        a img {
-          margin-right: 1em;
-        }
-
-        header {
-          padding: 0.2rem;
-          color: #fff;
-          background-color: #333;
-        }
-      `}</style>
+      </ul>
     </header>
   )
 }
