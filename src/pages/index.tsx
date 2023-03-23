@@ -25,8 +25,6 @@ const Home: FC<IProps> = ({ socials }: { socials: ISocials[] }) => {
       <Layout>
         test 18
         <br />
-        <Link href="/auth">auth</Link>
-        <br />
       </Layout>
       <Socials socials={socials} />
     </>
