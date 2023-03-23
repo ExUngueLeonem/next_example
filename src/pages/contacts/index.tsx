@@ -1,5 +1,5 @@
-import Layout from "@/components/Layout";
-import { IUser } from "@/models/contacts";
+import Layout from "components/Layout";
+import { IUser } from "models/contacts";
 import Head from "next/head";
 import Link from "next/link";
 import { FC } from "react";

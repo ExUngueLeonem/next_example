@@ -5,10 +5,10 @@ import Link from 'next/link'
 import { Inter } from 'next/font/google'
 
 import { FC } from 'react'
-import { ISocials } from '@/models/socials'
+import { ISocials } from 'models/socials'
 
-import Socials from '@/components/Socials'
-import Layout from '@/components/Layout'
+import Socials from 'components/Socials'
+import Layout from 'components/Layout'
 
 const inter = Inter({ subsets: ['latin'] })
 

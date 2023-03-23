@@ -1,6 +1,6 @@
-import Layout from '@/components/Layout';
-import PostInfo from '@/components/PostInfo';
-import { IPost } from '@/models/post';
+import Layout from 'components/Layout';
+import PostInfo from 'components/PostInfo';
+import { IPost } from 'models/post';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import { FC } from 'react';
