@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 import Footer from "../Footer";
-import Heading from "../Heading";
+import Header from "../Header";
 
 interface IProps {
     children: ReactNode;
@@ -9,7 +9,7 @@ interface IProps {
 const Layout: FC<IProps> = ({ children }) => {
     return (
         <>
-            <Heading />
+            <Header />
             <main className="container">
                 {children}
             </main>

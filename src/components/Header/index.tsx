@@ -1,12 +1,12 @@
 
 import { FC, useEffect } from 'react';
 import Link from 'next/link';
-import styles from './Heading.module.scss';
+import styles from './Header.module.scss';
 import { useRouter } from 'next/router';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 
-const Heading: FC = () => {
+const Header: FC = () => {
     const { data: session, status } = useSession();
 
     const router = useRouter();
@@ -61,4 +61,4 @@ const Heading: FC = () => {
     );
 };
 
-export default Heading;
+export default Header;
