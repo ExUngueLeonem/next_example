@@ -31,12 +31,9 @@ const Header: FC = () => {
                 Logo
                 {router.pathname}
                 {session ?
-
-
-
                     <>
                         {session.user.image &&
-                            <Image src={session.user.image} width={80} alt="avatar" height={80}/>
+                            <Image src={session.user.image} width={80} alt="avatar" height={80} />
                         }
                         Signed in as {session.user?.email} <br />
                         <button onClick={() => signOut()}>Sign out</button>
@@ -46,7 +43,6 @@ const Header: FC = () => {
                         Not signed in <br />
                         <button onClick={() => signIn()}>Sign in</button>
                     </>
-
                 }
 
             </div>
