@@ -1,11 +1,6 @@
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-body {
-  background-color: #333;
-  overflow: hidden;
-  margin: 0 auto;
-}
 .hypno {
   width: 100%;
   border: 1px solid rgba(255,255,255,.5);
