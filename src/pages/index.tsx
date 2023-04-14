@@ -9,24 +9,21 @@ import { ISocials } from 'models/socials'
 
 import Socials from 'components/Socials'
 import Layout from 'components/Layout'
+import HypnoSpiral from "../components/HypnoSpiral";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({subsets: ['latin']})
 
 interface IProps {
   socials: ISocials[];
 }
 
-const Home: FC<IProps> = ({ socials }: { socials: ISocials[] }) => {
+const Home: FC<IProps> = ({socials}: { socials: ISocials[] }) => {
   return (
     <>
       <Head>
         <title>HomePage</title>
       </Head>
-      <Layout>
-        test 18
-        <br />
-      </Layout>
-      <Socials socials={socials} />
+      <HypnoSpiral/>
     </>
   )
 }
